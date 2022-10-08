@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap");
+
+:root {
+  --font: #de7c60;
+  --section1: #f7f6f2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.section1 {
+  background-color: var(--section1);
+  height: 600px;
+  background-image: url("../public/images/product.png"),
+    url("../public/images/background-section1.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 400px, 1000px;
+  background-position: 65% 40px, 100% 0%;
+}
+
+.title {
+  background-image: url("../public/images/title.png");
+  height: 100px;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position: 10% 100%;
+}
+
+.section1 .container1 {
+  position: absolute;
+  top: 200px;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.slogan {
+  background-image: url("../public/images/3words.png");
+  height: 150px;
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: -32px 50%;
+}
+
+.test-button {
+  background-color: var(--font);
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: white;
+  padding: 15px;
+}
+
+.test-button:hover {
+  background-color: white;
+  border: 1px solid var(--font);
+  color: var(--font);
+}
+
+@media screen and (max-width: 900px) {
+  .section1 {
+    height: 900px;
+  }
+  .section1 .container1 {
+    top: 600px;
+  }
+}
