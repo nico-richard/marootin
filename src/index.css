@@ -3,6 +3,9 @@
 :root {
   --font: #de7c60;
   --section1: #f7f6f2;
+  --block1: #d9f6fa;
+  --block2: #fdd2bb;
+  --block3: #d7f6e7;
 }
 
 body {
@@ -52,6 +55,8 @@ body {
   font-weight: bold;
   color: white;
   padding: 15px;
+  border: 1px solid transparent;
+  transition: all 0.5s;
 }
 
 .test-button:hover {
@@ -60,11 +65,58 @@ body {
   color: var(--font);
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   .section1 {
     height: 900px;
   }
   .section1 .container1 {
     top: 600px;
   }
+}
+
+.section2 {
+  height: 600px;
+}
+
+.block-container {
+  display: flex;
+}
+
+.block1 {
+  background-color: var(--block1);
+}
+.block2 {
+  background-color: var(--block2);
+}
+.block3 {
+  background-color: var(--block3);
+}
+
+.block-container > * {
+  padding: 40px 29px 29px 15px;
+  margin: 20px;
+  border-radius: 100px 100px 2px 2px;
+}
+
+.block-container .block-title {
+  text-align: center;
+  color: var(--font);
+  font-weight: bold;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.block-container .block-intro,
+.block-list {
+  font-family: "Open Sans", Arial sans-serif;
+  text-align: justify;
+  font-size: 12.5px;
+}
+
+.block-list .list-text {
+  display: inline;
+}
+
+.list-content {
+  margin: 10px 0px;
 }
