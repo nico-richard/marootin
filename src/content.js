@@ -1,4 +1,4 @@
-const titleBlock1 = "Nettoyer";
+const titleBlock1 = "1. Nettoyer";
 const introBlock1 = `Le stick 2en1 nettoyant – démaquillant se transforme en lait au 
     contact de l’eau, éliminant les impuretés et le maquillage en douceur. 
     Son pH est adapté à votre peau afin de respecter son équilibre.`;
@@ -16,7 +16,7 @@ const contentBlock1 = {
   color: colorBlock1,
 };
 // ---------------------------------------------------------------------------------
-const titleBlock2 = "Nourir";
+const titleBlock2 = "2. Nourir";
 const introBlock2 = `La crème est un soin du quotidien. Sa texture pénètre sans 
 laisser de fini collant. Elle nourrit, préserve l’élasticité pour une peau plus 
 douce et repulpée. Riche en bêta-carotène pour un teint bonne mine et éclatant .`;
@@ -34,7 +34,7 @@ const contentBlock2 = {
   color: colorBlock2,
 };
 // ---------------------------------------------------------------------------------
-const titleBlock3 = "Exfolier";
+const titleBlock3 = "3. Exfolier";
 const introBlock3 = `Le masque peeling aux acides de fruits (A.H.A) exfolie en 
 douceur les cellules mortes favorisant la régénération de la peau. Boosté par 
 l’extrait de pamplemousse rose et l’argile rose pour un teint détoxifié, lisse et éclatant.`;

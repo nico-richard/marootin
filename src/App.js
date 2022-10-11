@@ -5,6 +5,7 @@ function App() {
     <div className="app">
       <Section1 />
       <Section2 title={"[ma·routine] visage essentielle"} />
+      <Section3 title={"Le concept"} />
     </div>
   );
 }
@@ -60,13 +61,47 @@ function Block({ content, id }) {
 function List({ content }) {
   let renderedList = content.map((element, index) => {
     return (
-      <div className="list-content">
-        <span>{"⚡️"}</span>
-        <div className="list-text" key={index}>
-          {element}
-        </div>
+      <div className="list-content" key={index}>
+        <span className="bolt-icon">{"⚡️"}</span>
+        <div className="list-text">{element}</div>
       </div>
     );
   });
   return <div className="block-list">{renderedList}</div>;
+}
+
+function Section3({ title }) {
+  return (
+    <div className="section3">
+      <div className="section2-title">{title}</div>
+      <ConceptItem
+        text={"Tournez & appliquez le stick directement sur le visage"}
+        image={"simple"}
+      />
+      <ConceptItem
+        text={"Dans la salle de bain ou votre sac. Emportez-le partout !"}
+        image={"pratique"}
+      />
+      <ConceptItem
+        text={"Produit terminé ? Gardez le stick et rechargez-le !"}
+        image={"rechargeable"}
+      />
+    </div>
+  );
+}
+
+function ConceptItem({ text, image }) {
+  return (
+    <div className="concept-item">
+      <div
+        style={{
+          backgroundImage: `url("http://localhost:3000/images/${image}.png")`,
+          width: "150px",
+          height: "150px",
+        }}
+        className="rotate-item"
+      ></div>
+      <div className="legend-item">{text}</div>
+    </div>
+  );
 }
