@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 
 import {
@@ -9,6 +10,9 @@ import {
   companyItem3,
   companyItem4,
   formContent,
+  conceptItem1,
+  conceptItem2,
+  conceptItem3,
 } from "./content.js";
 
 function App() {
@@ -88,18 +92,9 @@ function Section3({ title }) {
     <div className="section3">
       <div className="section3-title">{title}</div>
       <div className="concept-container">
-        <ConceptItem
-          text={"Tournez & appliquez le stick directement sur le visage"}
-          image={"simple"}
-        />
-        <ConceptItem
-          text={"Dans la salle de bain ou votre sac. Emportez-le partout !"}
-          image={"pratique"}
-        />
-        <ConceptItem
-          text={"Produit terminé ? Gardez le stick et rechargez-le !"}
-          image={"rechargeable"}
-        />
+        <ConceptItem item={conceptItem1} />
+        <ConceptItem item={conceptItem2} />
+        <ConceptItem item={conceptItem3} />
       </div>
       <div className="button-container">
         <Button name={"test2"} text={"Tester nos produits"} />
@@ -115,7 +110,7 @@ function Section3({ title }) {
   );
 }
 
-function ConceptItem({ text, image }) {
+function ConceptItem({ item }) {
   const [angle, setAngle] = useState(0);
 
   function setTheAngle() {
@@ -133,12 +128,13 @@ function ConceptItem({ text, image }) {
       window.removeEventListener("scroll", setTheAngle);
     };
   });
+  console.log(item.image);
 
   return (
     <div className="concept-item">
       <div
         style={{
-          backgroundImage: `url("../public/images/concept-item/${image}.png")`,
+          backgroundImage: `url("${item.image}")`,
           backgroundSize: "contain",
           width: "220px",
           height: "220px",
@@ -146,7 +142,7 @@ function ConceptItem({ text, image }) {
         }}
         className="rotate-item"
       ></div>
-      <div className="legend-item">{text}</div>
+      <div className="legend-item">{item.text}</div>
     </div>
   );
 }
@@ -157,7 +153,7 @@ function CompanyItem({ item }) {
       <div
         className="company-image"
         style={{
-          backgroundImage: `url("../public/images/company/${item.image}.png")`,
+          backgroundImage: `url(${item.image})`,
           backgroundSize: "contain",
           width: "180px",
           height: "180px",

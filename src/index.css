@@ -17,15 +17,15 @@ body {
 .section1 {
   background-color: var(--section1);
   height: 700px;
-  background-image: url("../public/images/product.png"),
-    url("../public/images/background-section1.png");
+  background-image: url("./images/product.png"),
+    url("./images/background-section1.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 450px, 1000px;
   background-position: 65% 80px, 65% 80px;
 }
 
 .title {
-  background-image: url("../public/images/title.png");
+  background-image: url("./images/title.png");
   height: 100px;
   background-repeat: no-repeat;
   background-size: 400px;
@@ -41,7 +41,7 @@ body {
 }
 
 .slogan {
-  background-image: url("../public/images/3words.png");
+  background-image: url("./images/3words.png");
   height: 150px;
   background-repeat: no-repeat;
   background-size: 300px;
@@ -173,7 +173,7 @@ body {
 
 .section3 {
   background-color: var(--section1);
-  background-image: url("../public/images/background-section3.png");
+  background-image: url("./images/background-section3.png");
   background-repeat: no-repeat;
   background-position: 300px 0px;
   height: 1330px;
@@ -232,7 +232,7 @@ body {
 }
 
 .section4 {
-  background-image: url("../public/images/background-section4.png");
+  background-image: url("./images/background-section4.png");
   background-repeat: no-repeat;
   background-size: 2000px;
   height: 700px;
@@ -328,21 +328,21 @@ body {
 }
 
 .social-container .instagram {
-  background: url("../public/images/socials/instagram.png"), var(--font);
+  background: url("./images/socials/instagram.png"), var(--font);
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .social-container .facebook {
-  background: url("../public/images/socials/facebook.png"), var(--font);
+  background: url("./images/socials/facebook.png"), var(--font);
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: center center;
 }
 
 .social-container .linkedin {
-  background: url("../public/images/socials/linkedin.png"), var(--font);
+  background: url("./images/socials/linkedin.png"), var(--font);
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: center center;

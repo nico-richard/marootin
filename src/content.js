@@ -1,3 +1,11 @@
+import pratique from "./images/concept-item/pratique.png";
+import rechargeable from "./images/concept-item/rechargeable.png";
+import simple from "./images/concept-item/simple.png";
+import coCreation from "./images/company/co-creation.png";
+import ecoEmballage from "./images/company/eco-emballage.png";
+import formuleVegan from "./images/company/formule-vegan.png";
+import internDevelopment from "./images/company/intern-development.png";
+
 const titleBlock1 = "1. Nettoyer";
 const introBlock1 = `Le stick 2en1 nettoyant – démaquillant se transforme en lait au 
     contact de l’eau, éliminant les impuretés et le maquillage en douceur. 
@@ -52,23 +60,36 @@ const contentBlock3 = {
   color: colorBlock3,
 };
 // ---------------------------------------------------------------------------------
-const image1 = "formule-vegan";
-const image2 = "intern-development";
-const image3 = "eco-emballage";
-const image4 = "co-creation";
+const companyImage1 = formuleVegan;
+const companyImage2 = internDevelopment;
+const companyImage3 = ecoEmballage;
+const companyImage4 = coCreation;
 
-const text1 = `Formules véganes 100% d’origine naturelle, 
+const companyText1 = `Formules véganes 100% d’origine naturelle, 
 aux actifs innovants & sensoriels.`;
-const text2 = `Développement et formulation en interne par 
+const companyText2 = `Développement et formulation en interne par 
 Clémence notre co- fondatrice.`;
-const text3 = `Emballages éco-responsables. Le concept de 
+const companyText3 = `Emballages éco-responsables. Le concept de 
 recharge limite l’emballage à usage unique.`;
-const text4 = `Co-création des produits avec notre communauté.`;
+const companyText4 = `Co-création des produits avec notre communauté.`;
 
-const companyItem1 = { image: image1, text: text1 };
-const companyItem2 = { image: image2, text: text2 };
-const companyItem3 = { image: image3, text: text3 };
-const companyItem4 = { image: image4, text: text4 };
+const companyItem1 = { image: companyImage1, text: companyText1 };
+const companyItem2 = { image: companyImage2, text: companyText2 };
+const companyItem3 = { image: companyImage3, text: companyText3 };
+const companyItem4 = { image: companyImage4, text: companyText4 };
+// ---------------------------------------------------------------------------------
+const conceptImage1 = simple;
+const conceptImage2 = pratique;
+const conceptImage3 = rechargeable;
+
+const conceptText1 = "Tournez & appliquez le stick directement sur le visage";
+const conceptText2 =
+  "Dans la salle de bain ou votre sac. Emportez-le partout !";
+const conceptText3 = "Produit terminé ? Gardez le stick et rechargez-le !";
+
+const conceptItem1 = { image: conceptImage1, text: conceptText1 };
+const conceptItem2 = { image: conceptImage2, text: conceptText2 };
+const conceptItem3 = { image: conceptImage3, text: conceptText3 };
 // ---------------------------------------------------------------------------------
 const formTitle = "Participez à la co-conception de nos produits.";
 const formParagraph1 = {
@@ -100,4 +121,7 @@ export {
   companyItem3,
   companyItem4,
   formContent,
+  conceptItem1,
+  conceptItem2,
+  conceptItem3,
 };
