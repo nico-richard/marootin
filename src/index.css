@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 
 :root {
   --font: #de7c60;
@@ -11,7 +11,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif;
 }
 
 .section1 {
@@ -20,7 +20,7 @@ body {
   background-image: url("../public/images/product.png"),
     url("../public/images/background-section1.png");
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 400px, 1000px;
+  background-size: 450px, 1000px;
   background-position: 65% 80px, 65% 80px;
 }
 
@@ -48,7 +48,12 @@ body {
   background-position: -32px 50%;
 }
 
-.test-button {
+.test1-button {
+  width: 60%;
+}
+
+.test1-button,
+.test2-button {
   background-color: var(--font);
   border: none;
   text-transform: uppercase;
@@ -57,9 +62,12 @@ body {
   padding: 15px;
   border: 1px solid transparent;
   transition: all 0.5s;
+  text-align: center;
+  text-decoration: none;
 }
 
-.test-button:hover {
+.test1-button:hover,
+.test2-button:hover {
   background-color: white;
   border: 1px solid var(--font);
   color: var(--font);
@@ -82,7 +90,9 @@ body {
   height: 600px;
 }
 
-.section2-title {
+.section2-title,
+.section35-title,
+.section3-title {
   color: var(--font);
   font-size: 33px;
   font-weight: 700;
@@ -156,11 +166,184 @@ body {
   .block-container > * {
     max-width: 500px;
   }
+  .section2 {
+    height: 1050px;
+  }
 }
 
 .section3 {
   background-color: var(--section1);
-  /* background-image: url("../public/images/background-section3.png"); */
+  background-image: url("../public/images/background-section3.png");
   background-repeat: no-repeat;
+  background-position: 300px 0px;
   height: 1330px;
+}
+
+.section3-title {
+  padding-top: 50px;
+}
+
+.concept-container {
+  display: flex;
+  justify-content: center;
+}
+
+.concept-item .rotate-item {
+  margin: 0 auto;
+}
+
+.concept-item .legend-item {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.button-container {
+  text-align: center;
+  margin: 100px auto;
+}
+
+.company-item-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 120px 0;
+}
+
+.company-item {
+  width: 180px;
+}
+
+.company-item .company-image {
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0px 30px 80px -20px rgb(68 40 84 / 40%);
+}
+
+.company-item .image-description {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+}
+
+.section4 {
+  background-image: url("../public/images/background-section4.png");
+  background-repeat: no-repeat;
+  background-size: 1800px;
+  height: 700px;
+  padding: 20px;
+  position: relative;
+}
+
+.form-container {
+  background-color: var(--font);
+  max-width: 450px;
+  width: 100%;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.form-container .form-title {
+  font-family: "Open Sans" Arial, Helvetica, sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.form-container .paragraph1,
+.paragraph2,
+.form-terms {
+  font-size: 13px;
+  font-weight: 400;
+  color: white;
+  margin: 20px 0;
+  line-height: 23px;
+}
+
+.form-container fieldset {
+  border: none;
+  margin: 0 0 20px;
+  border-radius: 5px;
+  padding: 0;
+  width: 100%;
+}
+.form-container fieldset:nth-child(-n + 2) {
+  background-color: white;
+}
+
+.test-product-form .input-name,
+.input-email {
+  background-color: transparent;
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  padding: 15px;
+  margin: 0;
+}
+
+.test-product-form .input-name:focus,
+.input-email:focus {
+  border: none;
+  outline: none;
+}
+
+.test-product-form .submit {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: var(--section1);
+  color: var(--font);
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.follow-us-title {
+  position: absolute;
+  bottom: 25px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--font);
+}
+
+.social-container {
+  padding: 20px 0;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  gap: 10px;
+  background-color: var(--section1);
+}
+
+.social-container > * {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.social-container .instagram {
+  background: url("../public/images/socials/instagram.png"), var(--font);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social-container .facebook {
+  background: url("../public/images/socials/facebook.png"), var(--font);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.social-container .linkedin {
+  background: url("../public/images/socials/linkedin.png"), var(--font);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }

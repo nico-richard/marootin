@@ -1,4 +1,15 @@
-import { contentBlock1, contentBlock2, contentBlock3 } from "./content.js";
+import { useState, useEffect } from "react";
+
+import {
+  contentBlock1,
+  contentBlock2,
+  contentBlock3,
+  companyItem1,
+  companyItem2,
+  companyItem3,
+  companyItem4,
+  formContent,
+} from "./content.js";
 
 function App() {
   return (
@@ -6,6 +17,8 @@ function App() {
       <Section1 />
       <Section2 title={"[ma·routine] visage essentielle"} />
       <Section3 title={"Le concept"} />
+      <Section4 />
+      <Socials />
     </div>
   );
 }
@@ -21,7 +34,7 @@ function Section1() {
           [ma·routine] visage en stick rechargeable.
         </div>
         <div className="slogan" />
-        <Button name={"test"} text={"Tester nos produits"} />
+        <Button name={"test1"} text={"Tester nos produits"} />
       </div>
     </div>
   );
@@ -29,9 +42,9 @@ function Section1() {
 
 function Button({ name, text }) {
   return (
-    <div>
-      <button className={`${name}-button`}>{text}</button>
-    </div>
+    <a className={`${name}-button`} href="#form">
+      {text}
+    </a>
   );
 }
 
@@ -73,35 +86,152 @@ function List({ content }) {
 function Section3({ title }) {
   return (
     <div className="section3">
-      <div className="section2-title">{title}</div>
-      <ConceptItem
-        text={"Tournez & appliquez le stick directement sur le visage"}
-        image={"simple"}
-      />
-      <ConceptItem
-        text={"Dans la salle de bain ou votre sac. Emportez-le partout !"}
-        image={"pratique"}
-      />
-      <ConceptItem
-        text={"Produit terminé ? Gardez le stick et rechargez-le !"}
-        image={"rechargeable"}
-      />
+      <div className="section3-title">{title}</div>
+      <div className="concept-container">
+        <ConceptItem
+          text={"Tournez & appliquez le stick directement sur le visage"}
+          image={"simple"}
+        />
+        <ConceptItem
+          text={"Dans la salle de bain ou votre sac. Emportez-le partout !"}
+          image={"pratique"}
+        />
+        <ConceptItem
+          text={"Produit terminé ? Gardez le stick et rechargez-le !"}
+          image={"rechargeable"}
+        />
+      </div>
+      <div className="button-container">
+        <Button name={"test2"} text={"Tester nos produits"} />
+      </div>
+      <div className="section35-title">{"Maroot’in c’est…"}</div>
+      <div className="company-item-container">
+        <CompanyItem item={companyItem1} />
+        <CompanyItem item={companyItem2} />
+        <CompanyItem item={companyItem3} />
+        <CompanyItem item={companyItem4} />
+      </div>
     </div>
   );
 }
 
 function ConceptItem({ text, image }) {
+  const [angle, setAngle] = useState(0);
+
+  function setTheAngle() {
+    if (window.scrollY > 800 && window.scrollY < 1800) {
+      setAngle(window.scrollY / 3);
+      console.log(window.scrollY);
+    }
+  }
+
+  useEffect(() => {
+    function watchScroll() {
+      window.addEventListener("scroll", setTheAngle);
+    }
+    watchScroll();
+    return () => {
+      window.removeEventListener("scroll", setTheAngle);
+    };
+  });
+
   return (
     <div className="concept-item">
       <div
         style={{
-          backgroundImage: `url("http://localhost:3000/images/${image}.png")`,
-          width: "150px",
-          height: "150px",
+          backgroundImage: `url("http://localhost:3000/images/concept-item/${image}.png")`,
+          backgroundSize: "contain",
+          width: "220px",
+          height: "220px",
+          transform: `rotate(${angle}deg)`,
         }}
         className="rotate-item"
       ></div>
       <div className="legend-item">{text}</div>
+    </div>
+  );
+}
+
+function CompanyItem({ item }) {
+  return (
+    <div className="company-item">
+      <div
+        className="company-image"
+        style={{
+          backgroundImage: `url("http://localhost:3000/images/company/${item.image}.png")`,
+          backgroundSize: "contain",
+          width: "180px",
+          height: "180px",
+        }}
+      ></div>
+      <div className="image-description">{item.text}</div>
+    </div>
+  );
+}
+
+function Section4() {
+  return (
+    <div className="section4" id="form">
+      <Form content={formContent} />
+    </div>
+  );
+}
+
+function Form({ content }) {
+  return (
+    <div className="form-container">
+      <div className="form-title">{content.title}</div>
+      <div className="paragraph1">
+        <b style={{ fontWeight: "700" }}>{content.paragraph1.header}</b>
+        {content.paragraph1.text}
+      </div>
+      <div className="paragraph2">
+        <b style={{ fontWeight: "700" }}>{content.paragraph2.header}</b>
+        {content.paragraph2.text}
+      </div>
+      <form className="test-product-form" method="post">
+        <fieldset>
+          <input type="text" className="input-name" placeholder="Nom" />
+        </fieldset>
+        <fieldset>
+          <input type="text" className="input-email" placeholder="E-mail" />
+        </fieldset>
+        <fieldset>
+          <input type="submit" className="submit" value="VALIDER" />
+        </fieldset>
+      </form>
+      <div className="form-terms">{content.terms}</div>
+      <div className="follow-us-title">
+        {"Suivez nos aventures sur les réseaux sociaux"}
+      </div>
+    </div>
+  );
+}
+
+function Socials() {
+  return (
+    <div className="social-container">
+      <a
+        href="https://www.instagram.com/maroot_in/"
+        title="Suivez nous sur Instagram"
+        className="instagram"
+      >
+        <></>
+      </a>
+      <a
+        href="https://www.facebook.com/maroutinecosmetique"
+        title="Suivez nous sur Facebook"
+        className="facebook"
+      >
+        <></>
+      </a>
+      <a
+        href="https://www.linkedin.com/company/maroot-in"
+        title="Suivez nous sur LinkedIn"
+        className="linkedin"
+      >
+        <></>
+      </a>
     </div>
   );
 }

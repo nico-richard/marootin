@@ -51,5 +51,53 @@ const contentBlock3 = {
   list: listBlock3,
   color: colorBlock3,
 };
+// ---------------------------------------------------------------------------------
+const image1 = "formule-vegan";
+const image2 = "intern-development";
+const image3 = "eco-emballage";
+const image4 = "co-creation";
 
-export { contentBlock1, contentBlock2, contentBlock3 };
+const text1 = `Formules véganes 100% d’origine naturelle, 
+aux actifs innovants & sensoriels.`;
+const text2 = `Développement et formulation en interne par 
+Clémence notre co- fondatrice.`;
+const text3 = `Emballages éco-responsables. Le concept de 
+recharge limite l’emballage à usage unique.`;
+const text4 = `Co-création des produits avec notre communauté.`;
+
+const companyItem1 = { image: image1, text: text1 };
+const companyItem2 = { image: image2, text: text2 };
+const companyItem3 = { image: image3, text: text3 };
+const companyItem4 = { image: image4, text: text4 };
+// ---------------------------------------------------------------------------------
+const formTitle = "Participez à la co-conception de nos produits.";
+const formParagraph1 = {
+  header: `Testez notre routine complète :`,
+  text: ` 50 personnes 
+seront sélectionées chaque mois jusqu'au lancement de la marque.`,
+};
+const formParagraph2 = {
+  header: `Conditions :`,
+  text: ` Vous inscrire ➕ Être abonné à 
+notre compte Instagram ou/et Facebook (mettre votre pseudo à la place du nom).`,
+};
+const formTerms = `En validant ce formulaire, vous autorisez Maroot'in à utiliser 
+vos données personnelles pour vous tenir informer des nouveautés par email.`;
+
+const formContent = {
+  title: formTitle,
+  paragraph1: formParagraph1,
+  paragraph2: formParagraph2,
+  terms: formTerms,
+};
+
+export {
+  contentBlock1,
+  contentBlock2,
+  contentBlock3,
+  companyItem1,
+  companyItem2,
+  companyItem3,
+  companyItem4,
+  formContent,
+};
