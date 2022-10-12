@@ -121,7 +121,6 @@ function ConceptItem({ text, image }) {
   function setTheAngle() {
     if (window.scrollY > 800 && window.scrollY < 1800) {
       setAngle(window.scrollY / 3);
-      console.log(window.scrollY);
     }
   }
 
@@ -139,7 +138,7 @@ function ConceptItem({ text, image }) {
     <div className="concept-item">
       <div
         style={{
-          backgroundImage: `url("http://localhost:3000/images/concept-item/${image}.png")`,
+          backgroundImage: `url("../public/images/concept-item/${image}.png")`,
           backgroundSize: "contain",
           width: "220px",
           height: "220px",
@@ -158,7 +157,7 @@ function CompanyItem({ item }) {
       <div
         className="company-image"
         style={{
-          backgroundImage: `url("http://localhost:3000/images/company/${item.image}.png")`,
+          backgroundImage: `url("../public/images/company/${item.image}.png")`,
           backgroundSize: "contain",
           width: "180px",
           height: "180px",
