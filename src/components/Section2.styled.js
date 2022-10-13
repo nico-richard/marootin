@@ -28,9 +28,29 @@ export const BlockContainer = styled.div`
 export const BlockStyled = styled.div`
   padding: 20px 29px 29px 15px;
   margin: 20px;
-  border-radius: 100px 100px 10px 10px;
+  border-radius: 100px 100px 2px 2px;
   min-width: 250px;
   max-width: 300px;
+  @keyframes borderWave {
+    from {
+      border-radius: 100px 100px 2px 2px;
+    }
+    25% {
+      border-radius: 2px 100px 100px 2px;
+    }
+    50% {
+      border-radius: 2px 2px 100px 100px;
+    }
+    75% {
+      border-radius: 100px 2px 2px 100px;
+    }
+    to {
+      border-radius: 100px 100px 2px 2px;
+    }
+  }
+  &:hover {
+    animation: borderWave 0.5s linear;
+  }
   @media (max-width: 1000px) {
     max-width: 60%;
   }

@@ -15,7 +15,7 @@ export const Section3Styled = styled.section`
   @media (max-width: 600px) {
     height: 2200px;
   }
-  @media (max-width: 430px) {
+  @media (max-width: 447px) {
     height: 2800px;
   }
 `;
@@ -39,7 +39,7 @@ export const CompanyItemContainer = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 70px;
   margin: 120px 0;
 `;
 

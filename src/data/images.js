@@ -13,6 +13,7 @@ import sloganImage from "../images/3words.png";
 import facebookLogo from "../images/socials/facebook.png";
 import instagramLogo from "../images/socials/instagram.png";
 import linkedinLogo from "../images/socials/linkedin.png";
+import menuImage from "../images/menu.png";
 
 export {
   pratique,
@@ -30,4 +31,5 @@ export {
   facebookLogo,
   instagramLogo,
   linkedinLogo,
+  menuImage,
 };

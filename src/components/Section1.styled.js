@@ -10,6 +10,20 @@ export const Section1Styled = styled.section`
   background-size: 800px;
   background-position: calc(100% - 30px) calc(100% - 130px);
   position: relative;
+  @keyframes zoomInAndOut {
+    from {
+      background-size: 800px;
+    }
+    50% {
+      background-size: 850px;
+    }
+    to {
+      background-size: 800px;
+    }
+  }
+  &:hover {
+    animation: zoomInAndOut 0.3s;
+  }
   @media (min-width: 600px) and (max-width: 1000px) {
     background-size: 600px;
     background-position: center 220px;
@@ -43,7 +57,46 @@ export const WebsiteTitle = styled.img`
   }
 `;
 
-export const HeaderContainer = styled.div`
+export const MenuTrigger = styled.img`
+  position: absolute;
+  width: 50px;
+  top: 100px;
+  right: 50px;
+  &:hover {
+    filter: drop-shadow(5px 5px 5px);
+  }
+  z-index: 10;
+`;
+
+export const DropDownMenuStyled = styled.div`
+  position: absolute;
+  top: 160px;
+  right: 40px;
+  min-width: 250px;
+  background-color: ${color.section1};
+  opacity: 0.9;
+  box-shadow: 5px 3px 15px;
+  z-index: 9;
+  border-radius: 10px;
+  transition: all 0.5s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const MenuItem = styled.a`
+  font-size: 20px;
+  font-weight: bold;
+  padding: 20px;
+  color: ${color.font};
+  text-decoration: none;
+  &:hover {
+    background-color: ${color.font};
+    color: ${color.section1};
+  }
+`;
+
+export const HeaderContainer = styled.a`
   position: absolute;
   top: 250px;
   left: 150px;
