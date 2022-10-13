@@ -8,13 +8,11 @@
   --block3: #d7f6e7;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Open Sans", Helvetica, Arial, Lucida, sans-serif;
-}
+/* body {
 
-.section1 {
+} */
+
+/* .section1 {
   background-color: var(--section1);
   height: 700px;
   background-image: url("./images/product.png"),
@@ -22,37 +20,37 @@ body {
   background-repeat: no-repeat, no-repeat, no-repeat;
   background-size: 450px, 1000px;
   background-position: 65% 80px, 65% 80px;
-}
+} */
 
-.title {
+/* .title {
   background-image: url("./images/title.png");
   height: 100px;
   background-repeat: no-repeat;
   background-size: 400px;
   background-position: 10% 100%;
-}
+} */
 
-.section1 .container1 {
+/* .section1 .container1 {
   position: absolute;
   top: 200px;
   left: 10%;
   display: flex;
   flex-direction: column;
-}
+} */
 
-.slogan {
+/* .slogan {
   background-image: url("./images/3words.png");
   height: 150px;
   background-repeat: no-repeat;
   background-size: 300px;
   background-position: -32px 50%;
-}
+} */
 
-.test1-button {
+/* .test1-button {
   width: 60%;
-}
+} */
 
-.test1-button,
+/* .test1-button,
 .test2-button {
   background-color: var(--font);
   border: none;
@@ -64,16 +62,16 @@ body {
   transition: all 0.5s;
   text-align: center;
   text-decoration: none;
-}
+} */
 
-.test1-button:hover,
+/* .test1-button:hover,
 .test2-button:hover {
   background-color: white;
   border: 1px solid var(--font);
   color: var(--font);
-}
+} */
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (min-width: 600px) and (max-width: 1000px) {
   .section1 {
     height: 700px;
     background-size: 320px, 800px;
@@ -86,11 +84,23 @@ body {
   }
 }
 
-.section2 {
-  height: 600px;
-}
+@media screen and (max-width: 600px) {
+  .section1 {
+    background-size: 250px, 600px;
+  }
+  .section1 .container1 {
+    top: 400px;
+  }
+  .title {
+    background-size: 250px;
+  }
+} */
 
-.section2-title,
+/* .section2 {
+  height: 600px;
+} */
+
+/* .section2-title,
 .section35-title,
 .section3-title {
   color: var(--font);
@@ -99,17 +109,17 @@ body {
   margin: 50px 0;
   text-align: center;
   font-family: "Open Sans";
-}
+} */
 
-.block-container {
+/* .block-container {
   display: flex;
   justify-content: space-around;
   padding: 30px 50px;
   align-items: center;
-  /* overflow-x: scroll; */
-}
+  // overflow-x: scroll;
+} */
 
-.block1 {
+/* .block1 {
   background-color: var(--block1);
 }
 .block2 {
@@ -125,25 +135,25 @@ body {
   border-radius: 100px 100px 10px 10px;
   min-width: 250px;
   max-width: 300px;
-}
+} */
 
-.block-title {
+/* .block-title {
   text-align: center;
   color: var(--font);
   font-weight: bold;
   font-size: 25px;
   margin-bottom: 30px;
-}
+} */
 
-.block-container .block-intro,
+/* .block-container .block-intro,
 .block-list {
   font-family: "Open Sans", Arial sans-serif;
   font-size: 12.5px;
-}
-.block-intro {
+} */
+/* .block-intro {
   text-align: justify;
-}
-.block-list {
+} */
+/* .block-list {
   font-style: italic;
 }
 
@@ -157,9 +167,9 @@ body {
 
 .bolt-icon {
   margin-right: 5px;
-}
+} */
 
-@media screen and (max-width: 1000px) {
+/* @media screen and (max-width: 1000px) {
   .block-container {
     flex-direction: column;
   }
@@ -169,9 +179,9 @@ body {
   .section2 {
     height: 1050px;
   }
-}
+} */
 
-.section3 {
+/* .section3 {
   background-color: var(--section1);
   background-image: url("./images/background-section3.png");
   background-repeat: no-repeat;
@@ -181,40 +191,40 @@ body {
 
 .section3-title {
   padding-top: 50px;
-}
+} */
 
-.concept-container {
+/* .concept-container {
   display: flex;
   justify-content: center;
-}
+} */
 
-.concept-item .rotate-item {
+/* .concept-item .rotate-item {
   margin: 0 auto;
-}
+} */
 
-.concept-item .legend-item {
+/* .concept-item .legend-item {
   width: 70%;
   margin: 0 auto;
   text-align: center;
   font-family: "Open Sans";
   font-size: 16px;
   font-weight: bold;
-}
+} */
 
-.button-container {
+/* .button-container {
   text-align: center;
   margin: 100px auto;
-}
+} */
 
-.company-item-container {
+/* .company-item-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 50px;
   margin: 120px 0;
-}
+} */
 
-.company-item {
+/* .company-item {
   width: 180px;
 }
 
@@ -229,26 +239,26 @@ body {
   font-weight: 600;
   font-size: 14px;
   text-align: center;
-}
+} */
 
-.section4 {
+/* .section4 {
   background-image: url("./images/background-section4.png");
   background-repeat: no-repeat;
   background-size: 2000px;
   height: 700px;
   padding: 20px;
   position: relative;
-}
+} */
 
-.form-container {
+/* .form-container {
   background-color: var(--font);
   max-width: 450px;
   width: 100%;
   margin: 50px auto;
   padding: 20px;
-}
+} */
 
-.form-container .form-title {
+/* .form-container .form-title {
   font-family: "Open Sans" Arial, Helvetica, sans-serif;
   font-size: 21px;
   font-weight: 600;
@@ -264,20 +274,21 @@ body {
   color: white;
   margin: 20px 0;
   line-height: 23px;
-}
+} */
 
-.form-container fieldset {
+/* .form-container fieldset {
   border: none;
   margin: 0 0 20px;
   border-radius: 5px;
   padding: 0;
   width: 100%;
-}
-.form-container fieldset:nth-child(-n + 2) {
-  background-color: white;
-}
+} */
 
-.test-product-form .input-name,
+/* .form-container fieldset:nth-child(-n + 2) {
+  background-color: white;
+} */
+
+/* .test-product-form .input-name,
 .input-email {
   background-color: transparent;
   box-sizing: border-box;
@@ -286,15 +297,15 @@ body {
   font-size: 16px;
   padding: 15px;
   margin: 0;
-}
+} */
 
-.test-product-form .input-name:focus,
+/* .test-product-form .input-name:focus,
 .input-email:focus {
   border: none;
   outline: none;
-}
+} */
 
-.test-product-form .submit {
+/* .test-product-form .submit {
   width: 100%;
   height: 40px;
   border: none;
@@ -302,17 +313,19 @@ body {
   color: var(--font);
   font-size: 17px;
   font-weight: 400;
-}
+} */
 
-.follow-us-title {
+/* .follow-us-title {
   position: absolute;
   bottom: 25px;
   font-size: 20px;
   font-weight: 800;
   color: var(--font);
-}
+  left: 50%;
+  transform: translateX(-50%);
+} */
 
-.social-container {
+/* .social-container {
   padding: 20px 0;
   display: flex;
   height: 80px;
@@ -325,9 +338,9 @@ body {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-}
+} */
 
-.social-container .instagram {
+/* .social-container .instagram {
   background: url("./images/socials/instagram.png"), var(--font);
   background-size: 20px;
   background-repeat: no-repeat;
@@ -346,4 +359,4 @@ body {
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: center center;
-}
+} */

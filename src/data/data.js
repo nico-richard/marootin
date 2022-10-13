@@ -1,10 +1,12 @@
-import pratique from "./images/concept-item/pratique.png";
-import rechargeable from "./images/concept-item/rechargeable.png";
-import simple from "./images/concept-item/simple.png";
-import coCreation from "./images/company/co-creation.png";
-import ecoEmballage from "./images/company/eco-emballage.png";
-import formuleVegan from "./images/company/formule-vegan.png";
-import internDevelopment from "./images/company/intern-development.png";
+import {
+  formuleVegan,
+  internDevelopment,
+  ecoEmballage,
+  coCreation,
+  simple,
+  pratique,
+  rechargeable,
+} from "./images.js";
 
 const titleBlock1 = "1. Nettoyer";
 const introBlock1 = `Le stick 2en1 nettoyant – démaquillant se transforme en lait au 
