@@ -3,6 +3,7 @@ import * as color from "../data/colors.js";
 import { bgSection1Image } from "../data/images.js";
 
 export const Section1Styled = styled.section`
+  overflow: hidden;
   background-color: ${color.section1};
   height: 900px;
   background-image: url(${bgSection1Image});
@@ -12,17 +13,17 @@ export const Section1Styled = styled.section`
   position: relative;
   @keyframes zoomInAndOut {
     from {
-      background-size: 800px;
+      transform: scale(1);
     }
     50% {
-      background-size: 850px;
+      transform: scale(1.2);
     }
     to {
-      background-size: 800px;
+      transform: scale(1);
     }
   }
   &:hover {
-    animation: zoomInAndOut 0.3s;
+    /* animation: zoomInAndOut 0.3s; */
   }
   @media (min-width: 600px) and (max-width: 1000px) {
     background-size: 600px;
@@ -47,13 +48,14 @@ export const WebsiteTitle = styled.img`
     width: 400px;
     left: 100px;
   }
-  @media (max-width: 600px) {
+  @media (min-width: 500px) and (max-width: 599px) {
     width: 300px;
     left: 50px;
   }
-  @media (max-width: 400px) {
+  @media (max-width: 499px) {
     width: 90%;
-    left: 10px;
+    top: 20px;
+    left: 20px;
   }
 `;
 
@@ -66,6 +68,14 @@ export const MenuTrigger = styled.img`
     filter: drop-shadow(5px 5px 5px);
   }
   z-index: 10;
+  @media screen and (min-width: 500px) and (max-width: 599px) {
+    width: 40px;
+    right: 40px;
+  }
+  @media screen and (max-width: 499px) {
+    width: 30px;
+    right: 30px;
+  }
 `;
 
 export const DropDownMenuStyled = styled.div`
