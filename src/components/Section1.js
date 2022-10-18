@@ -25,8 +25,8 @@ export default function Section1() {
 
   return (
     <Section1Styled onClick={handleBgClick}>
-      <WebsiteTitle src={titleImage} alt="website title" />
-      <MenuTrigger src={menuImage} alt="menu" onClick={handleMenuClick} />
+      {/* <WebsiteTitle src={titleImage} alt="website title" /> */}
+      {/* <MenuTrigger src={menuImage} alt="menu" onClick={handleMenuClick} /> */}
       {isShown && <DropDownMenu />}
       <HeaderContainer>
         <p>[ma·routine] visage en stick rechargeable.</p>

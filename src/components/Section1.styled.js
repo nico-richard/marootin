@@ -9,8 +9,9 @@ export const Section1Styled = styled.section`
   background-image: url(${bgSection1Image});
   background-repeat: no-repeat;
   background-size: 800px;
-  background-position: calc(100% - 30px) calc(100% - 130px);
+  background-position: calc(100% - 30px) calc(100% - 200px);
   position: relative;
+  /* z-index: -1; */
   @keyframes zoomInAndOut {
     from {
       transform: scale(1);
@@ -27,11 +28,11 @@ export const Section1Styled = styled.section`
   }
   @media (min-width: 600px) and (max-width: 1000px) {
     background-size: 600px;
-    background-position: center 220px;
+    background-position: center 150px;
   }
   @media (max-width: 600px) {
     background-size: 400px;
-    background-position: center 200px;
+    background-position: center 100px;
     height: 800px;
   }
   @media (max-width: 400px) {
@@ -108,7 +109,7 @@ export const MenuItem = styled.a`
 
 export const HeaderContainer = styled.a`
   position: absolute;
-  top: 250px;
+  top: 200px;
   left: 150px;
   display: flex;
   flex-direction: column;
